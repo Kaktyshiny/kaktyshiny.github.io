@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="static/plugins/offcanvas/css/bootstrap.offcanvas.min.css"/>
     <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/plugins/animate/animate.css"/>
     <script type="application/javascript" src="static/plugins/jquery/jquery.min.js"></script>
     <script type="application/javascript" src="static/plugins/offcanvas/js/bootstrap.offcanvas.min.js"></script>
     <script type="application/javascript" src="static/plugins/popper/popper.js"></script>
     <script type="application/javascript" src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="static/plugins/vue/vue.js"></script> <!-- TODO: заменить на vue.min.js -->
+    <script type="application/javascript" src="static/plugins/wow/wow.js"></script>
 </head>
 <body id="top">
     <header>
-        <nav id="navbar" class="navbar navbar-dark bg-dark navbar-expand-lg navigation">
+        <nav id="navbar" class="navbar navbar-dark bg-dark navbar-expand-lg navigation fixed-top">
             <button id="open-button" class="navbar-toggler hamburger" type="button" data-toggle="collapse1" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon bars"></span>
             </button>
@@ -27,31 +29,95 @@
                         <a class="navbar-brand ml-3" id="sitename" href="#">{{ sitename }}</a>
                     </li>
                     <li class="nav-item" v-for="item in menuitems">
-                        <a class="nav-link" href="#">{{ item.name }}</a>
+                        <a class="nav-link scrollto" v-bind:href="item.link">{{ item.name }}</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section>
-            Выполняет роль шапки – растянутая по ширине экрана
-            картинка. Поверх картинки центрированный текст (одно
-            предложение).
+        <section id="part1">
+            <div class="fade-layout">
+                <div class="text-center text-white">
+                    Your text can be here
+                </div>
+            </div>
         </section>
 
-        <section>
-            Состоит из 3 колонок с текстом (Lorem ipsum) и картинкой. В
-            мобильной версии колонки выстраиваются вертикально (друг
-            под другом). При открытии раздела - анимация появления
-            картинки.
+        <section id="part2" class="pb-5 pt-5 bg-dark text-white">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>SECTION NAME</h2>
+                </div>
+                <div class="col-lg-4 col-xl-4 col-12 item mb-5 mt-5">
+                    <img src="static/images/item1.png" class="mb-5 wow bounceInUp" data-wow-delay="0.5s"/>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-xl-4 col-12 item mb-5 mt-5">
+                    <img src="static/images/item2.png" class="mb-5 wow bounceInUp" data-wow-delay="0.5s"/>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-xl-4 col-12 item mb-5 mt-5">
+                    <img src="static/images/item3.png" class="mb-5 wow bounceInUp" data-wow-delay="0.5s"/>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            Состоит из текста с заголовком (Lorem ipsum).
+        <section id="part3" class="pb-5 pt-5">
+            <div class="col-12 text-center mb-5">
+                <h2>SECTION NAME</h2>
+            </div>
+            <div class="mt-5 part3-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
         </section>
     </main>
-    <footer class="bg-dark text-center">
+    <footer id="footer" class="bg-dark text-center">
         © Github.com/kaktyshiny 2018
         <div class="float-right social-networks">
             <div class="social vk">

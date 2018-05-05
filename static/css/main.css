@@ -1,7 +1,9 @@
 html, body{
     min-width: 100%;
 }
-
+nav, section{
+    border-bottom: 1px solid black;
+}
 @media (max-width: 991px) {
     #navbar {
         display: block;
@@ -89,4 +91,43 @@ footer {
 }
 .logo{
     height: 45px;
+}
+#part1, #part2, #part3{
+    min-height: 100vh;
+}
+#part1{
+    background-image: url("../images/header-bg.jpg");
+    background-size: cover;
+}
+.fade-layout{
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100%;
+    margin: auto 0;
+    display: table;
+}
+#part1 > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 200%;
+}
+#part1 > div > div:first-letter{
+    color: #6ef0c5;
+}
+#part2{
+    padding: 20px 60px;
+}
+.item{
+    text-align: center;
+}
+.item img{
+    height: 150px;
+    visibility: hidden;
+}
+#part3{
+    padding: 20px 60px;
+}
+.part3-text > p:first-letter{
+    color: #00b894;
+    font-size: 200%;
 }
